@@ -65,7 +65,7 @@ public class Pracownik extends Osoba {
 	public static void SearchByName(String i){
 		for(Pracownik pracownik : ekstensja){
 		if(i.equals(pracownik.getImie())){
-		System.out.println("Szukałeś: " + pracownik);
+		System.out.println("Szukales: " + pracownik);
 			}
 		}
 			
@@ -74,7 +74,7 @@ public class Pracownik extends Osoba {
 	public static void SearchBySurname(String i){
 		for(Pracownik pracownik : ekstensja){
 		if(i.equals(pracownik.getNazwisko())){
-		System.out.println("Szukałeś: " + pracownik);
+		System.out.println("Szukales: " + pracownik);
 		}
 		}
 	
@@ -83,9 +83,9 @@ public class Pracownik extends Osoba {
 	
 	
 	public String toString(){
-		String result = "Pracownik: " + getImie() + " " + getNazwisko() + " PESEL: " + getPESEL() + " Telefon: " + getTelefon() + " Data zatrudnienia: " + getData() + " Pensja: "+ getPensja() +" zł" + "\n" + " Obsługiwane zakupy:" + "\n";
+		String result = "Pracownik: " + getImie() + " " + getNazwisko() + " PESEL: " + getPESEL() + " Telefon: " + getTelefon() + " Data zatrudnienia: " + getData() + " Pensja: "+ getPensja() +" zl" + "\n" + " Obslugiwane zakupy:" + "\n";
 		for(Zakup a : zakup2){
-			result+= " ID zakupu: " + a.getId() + " Łączny koszt tego zakupu: " + a.getSuma() + " zł " +"\n";
+			result+= " ID zakupu: " + a.getId() + " laczny koszt tego zakupu: " + a.getSuma() + " zl " +"\n";
 		}
 		return result;
 	}

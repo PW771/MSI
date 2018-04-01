@@ -4,7 +4,7 @@ import java.util.Vector;
 public class Zakup {
 
 	private int id;
-	public ArrayList<Płyta>płyta=new ArrayList<Płyta>();
+	public ArrayList<Plyta>plyta=new ArrayList<Plyta>();
 	private Osoba klient;
 	private Osoba pracownik;
 	
@@ -29,7 +29,7 @@ public class Zakup {
 	}
 	public double getSuma() {
 		double suma=0;
-		for(Płyta a : płyta){
+		for(Plyta a : plyta){
 			suma+=a.getCena();	
 		}
 		return suma;
@@ -37,10 +37,10 @@ public class Zakup {
 	}
 
 	
-	public void addPłyta(Płyta nowaPłyta){
-		if(!płyta.contains(nowaPłyta)){
-			płyta.add(nowaPłyta);
-			nowaPłyta.addZakup(this);
+	public void addPlyta(Plyta nowaPlyta){
+		if(!plyta.contains(nowaPlyta)){
+			plyta.add(nowaPlyta);
+			nowaPlyta.addZakup(this);
 		}
 		
 }
@@ -51,7 +51,7 @@ public class Zakup {
 		
 	}
 	
-	public static void removeZespół(Zakup zakup){
+	public static void removeZespol(Zakup zakup){
 		ekstensja.remove(zakup);
 		
 	}
@@ -65,9 +65,9 @@ public class Zakup {
 	}
 	
 	public String toString(){
-		String result =" ID zakupów: " + getId() + " Łączny koszt tego zakupu: " + getSuma() + " zł " + "\n" + " Lista produktów: " + "\n";
-		for(Płyta a : płyta){
-			result+=" Płyta: " + a.getNazwa() + " Cena: " + a.getCena() + " zł" + "\n";		
+		String result =" ID zakupow: " + getId() + " laczny koszt tego zakupu: " + getSuma() + " zl " + "\n" + " Lista produktow: " + "\n";
+		for(Plyta a : plyta){
+			result+=" Plyta: " + a.getNazwa() + " Cena: " + a.getCena() + " zl" + "\n";		
 		}
 		return result;
 	

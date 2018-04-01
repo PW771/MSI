@@ -40,7 +40,7 @@ public static Vector<Muzyk> ekstensja = new Vector<Muzyk>();
 	public static void SearchByName(String i){
 		for(Muzyk muzyk : ekstensja){
 		if(i.equals(muzyk.getImie())){
-		System.out.println("Szukałeś: " + muzyk);
+		System.out.println("Szukales: " + muzyk);
 			}
 		}
 			
@@ -49,7 +49,7 @@ public static Vector<Muzyk> ekstensja = new Vector<Muzyk>();
 	public static void SearchBySurname(String i){
 		for(Muzyk muzyk : ekstensja){
 		if(i.equals(muzyk.getNazwisko())){
-		System.out.println("Szukałeś: " + muzyk);
+		System.out.println("Szukales: " + muzyk);
 			}
 		}
 			

@@ -1,46 +1,46 @@
 import java.util.Vector;
 
 public class Zatrudnienie {
-private int rokRozpoczęcia;
-RokZakończenia rokZakończenia;
-private Zespół zespół;
+private int rokRozpoczecia;
+RokZakonczenia rokZakonczenia;
+private Zespol zespol;
 private Muzyk muzyk;
 
 
-public int getRozpoczęcie(){			
-	return rokRozpoczęcia;
+public int getRozpoczecie(){			
+	return rokRozpoczecia;
 }
 
-public void setRozpoczęcie(int rokRozpoczęcia){
+public void setRozpoczecie(int rokRozpoczecia){
 	
-	this.rokRozpoczęcia=rokRozpoczęcia;
+	this.rokRozpoczecia=rokRozpoczecia;
 }
 
-public RokZakończenia getZakończenie(){			
-	return rokZakończenia;
+public RokZakonczenia getZakonczenie(){			
+	return rokZakonczenia;
 }
 
-public void setZakończenie(RokZakończenia rokZakończenia){
+public void setZakonczenie(RokZakonczenia rokZakonczenia){
 	
-	this.rokZakończenia=rokZakończenia;
+	this.rokZakonczenia=rokZakonczenia;
 }
 
 
-public void addZespół(Zespół Nowyzespół){
-	Nowyzespół.addZatrudnienie(this);
+public void addZespol(Zespol Nowyzespol){
+	Nowyzespol.addZatrudnienie(this);
 }
 public void addMuzyk(Muzyk Nowymuzyk){
 	Nowymuzyk.addZatrudnienie(this);
 }
 
 
-public Zespół getZespół(){			
-	return zespół;
+public Zespol getZespol(){			
+	return zespol;
 }
 
-public void setZespół(Zespół zespół){
+public void setZespol(Zespol zespol){
 	
-	this.zespół = zespół;
+	this.zespol = zespol;
 }
 public Muzyk getMuzyk(){			
 	return muzyk;
@@ -78,8 +78,8 @@ public static void pokażZatrudnienie(){
 
 
 public String toString(){
-	String result = "Zatrudnienie: " + getRozpoczęcie() + "-" + getZakończenie() +  "\n";
-	result += " " + getZespół() + " " + getMuzyk();
+	String result = "Zatrudnienie: " + getRozpoczecie() + "-" + getZakonczenie() +  "\n";
+	result += " " + getZespol() + " " + getMuzyk();
 	
 
 	
@@ -88,13 +88,13 @@ public String toString(){
 }
 
 
-public Zatrudnienie(int rokRozpoczęcia, RokZakończenia rokZakończenia,Zespół zespół, Muzyk muzyk){
-	setRozpoczęcie(rokRozpoczęcia);
-	setZakończenie(rokZakończenia);
-	setZespół(zespół);
+public Zatrudnienie(int rokRozpoczecia, RokZakonczenia rokZakonczenia,Zespol zespol, Muzyk muzyk){
+	setRozpoczecie(rokRozpoczecia);
+	setZakonczenie(rokZakonczenia);
+	setZespol(zespol);
 	setMuzyk(muzyk);
 	addZatrudnienie(this);
-	zespół.addZatrudnienie(this);
+	zespol.addZatrudnienie(this);
 	muzyk.addZatrudnienie(this);
 	
 	

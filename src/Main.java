@@ -8,24 +8,24 @@ public class Main {
 		Muzyk muzyk3 = new Muzyk("Bon", "Scott");
 		Muzyk muzyk4 = new Muzyk("Saul", "Hudson");
 		
-		Zespół zespół1= new Zespół("Guns n Roses");
-		Zespół zespół2= new Zespół("AC/DC");
-		Zespół zespół3= new Zespół("Led Zeppelin");
+		Zespol zespol1= new Zespol("Guns n Roses");
+		Zespol zespol2= new Zespol("AC/DC");
+		Zespol zespol3= new Zespol("Led Zeppelin");
 		
 		
-		Wytwórnia wytwórnia1 =  new Wytwórnia("Soul Records");
-		Wytwórnia wytwórnia2 =  new Wytwórnia("Atlantic Records");
-		Wytwórnia wytwórnia3 =  new Wytwórnia("Geffen Records");
+		Wytwornia wytwornia1 =  new Wytwornia("Soul Records");
+		Wytwornia wytwornia2 =  new Wytwornia("Atlantic Records");
+		Wytwornia wytwornia3 =  new Wytwornia("Geffen Records");
 		
-		Płyta płyta1= new Płyta("Highway to Hell",1979,zespół2, 20.00);
-		Płyta płyta2 = new Płyta("Led Zeppelin I", 1969, zespół3, 30.00);
-		Płyta płyta3 = new Płyta("Appetite For Destruction", 1987, zespół1, 35.95);
+		Plyta plyta1= new Plyta("Highway to Hell",1979,zespol2, 20.00);
+		Plyta plyta2 = new Plyta("Led Zeppelin I", 1969, zespol3, 30.00);
+		Plyta plyta3 = new Plyta("Appetite For Destruction", 1987, zespol1, 35.95);
 		
 	
-		BudynekWytwórni.utwórzBudynek(wytwórnia1,"Polska", "Warszawa", "Koszykowa", 86);
-		BudynekWytwórni.utwórzBudynek(wytwórnia2, "USA", "Los Angeles", "Simple Street", 12);
-		BudynekWytwórni.utwórzBudynek(wytwórnia3, "Rosja", "Moskwa", "Władimira", 10);
-		BudynekWytwórni.utwórzBudynek(wytwórnia1, "UK", "Londyn", "King Street", 18);
+		BudynekWytworni.utworzBudynek(wytwornia1,"Polska", "Warszawa", "Koszykowa", 86);
+		BudynekWytworni.utworzBudynek(wytwornia2, "USA", "Los Angeles", "Simple Street", 12);
+		BudynekWytworni.utworzBudynek(wytwornia3, "Rosja", "Moskwa", "Wladimira", 10);
+		BudynekWytworni.utworzBudynek(wytwornia1, "UK", "Londyn", "King Street", 18);
 		
 		LocalDate a1 = LocalDate.of(2010, 4, 5);
 		LocalDate a2 = LocalDate.of(2012, 9, 1);
@@ -43,17 +43,17 @@ public class Main {
 		Osoba klient3 =  new Klient("Joanna", "Zalewska", email3, a3);
 		
 		Osoba pracownik1 =  new Pracownik("Anna", "Kowalska", 19456304895L, 878193084,a4, 3500);
-		Osoba pracownik2 =  new Pracownik("Krzysztof", "Stępień", 93750378957L, 824948909,a5, 3200);	
+		Osoba pracownik2 =  new Pracownik("Krzysztof", "Stepien", 93750378957L, 824948909,a5, 3200);	
 		
-		RokZakończenia zakończenie1 = new RokZakończenia(2015);
-		RokZakończenia zakończenie2 = new RokZakończenia(1996);
-		RokZakończenia zakończenie3 = new RokZakończenia(2010);
-		RokZakończenia zakończenie4 = new RokZakończenia();
+		RokZakonczenia zakonczenie1 = new RokZakonczenia(2015);
+		RokZakonczenia zakonczenie2 = new RokZakonczenia(1996);
+		RokZakonczenia zakonczenie3 = new RokZakonczenia(2010);
+		RokZakonczenia zakonczenie4 = new RokZakonczenia();
 		
-		Zatrudnienie zatrudnienie1 = new Zatrudnienie(1976, zakończenie1,zespół1, muzyk1);
-		Zatrudnienie zatrudnienie2 = new Zatrudnienie(1965, zakończenie2, zespół2, muzyk2);
-		Zatrudnienie zatrudnienie3 = new Zatrudnienie(1987, zakończenie3, zespół3, muzyk3);
-		Zatrudnienie zatrudnienie4 = new Zatrudnienie(1987, zakończenie4, zespół1, muzyk4);
+		Zatrudnienie zatrudnienie1 = new Zatrudnienie(1976, zakonczenie1,zespol1, muzyk1);
+		Zatrudnienie zatrudnienie2 = new Zatrudnienie(1965, zakonczenie2, zespol2, muzyk2);
+		Zatrudnienie zatrudnienie3 = new Zatrudnienie(1987, zakonczenie3, zespol3, muzyk3);
+		Zatrudnienie zatrudnienie4 = new Zatrudnienie(1987, zakonczenie4, zespol1, muzyk4);
 		
 		
 		Zakup zakup1 = new Zakup(1, klient1, pracownik1);
@@ -72,33 +72,32 @@ public class Main {
 		pracownik2.addZakupPracownik(zakup3);
 		pracownik2.addZakupPracownik(zakup4);
 		
-		PłytaGatunkuRock.utwórzPłytęGatunkuRock(płyta1);
-		PłytaGatunkuRock.utwórzPłytęGatunkuRock(płyta2);
-		//PłytaGatunkuRock.utwórzPłytęGatunkuRock(płyta2);
+		PlytaGatunkuRock.utworzPlyteGatunkuRock(plyta1);
+		PlytaGatunkuRock.utworzPlyteGatunkuRock(plyta2);
 		
-		PłytaGatunkuMetal.utwórzPłytęGatunkuMetal(płyta1);
-		PłytaGatunkuMetal.utwórzPłytęGatunkuMetal(płyta3);
+		PlytaGatunkuMetal.utworzPlyteGatunkuMetal(plyta1);
+		PlytaGatunkuMetal.utworzPlyteGatunkuMetal(plyta3);
 		
-		PłytaGatunkuRap.utwórzPłytęGatunkuRap(płyta3);
-		
-		
-		zakup1.addPłyta(płyta1);
-		zakup1.addPłyta(płyta2);
-		zakup1.addPłyta(płyta3);
-		zakup2.addPłyta(płyta2);
-		zakup3.addPłyta(płyta1);
-		zakup4.addPłyta(płyta1);
-		zakup4.addPłyta(płyta2);
+		PlytaGatunkuRap.utworzPlyteGatunkuRap(plyta3);
 		
 		
-		zespół1.addPłyta(płyta3);
-		zespół2.addPłyta(płyta1);
-		zespół3.addPłyta(płyta2);
+		zakup1.addPlyta(plyta1);
+		zakup1.addPlyta(plyta2);
+		zakup1.addPlyta(plyta3);
+		zakup2.addPlyta(plyta2);
+		zakup3.addPlyta(plyta1);
+		zakup4.addPlyta(plyta1);
+		zakup4.addPlyta(plyta2);
 		
 		
-		wytwórnia1.addPłytaKwalif(płyta1);
-		wytwórnia2.addPłytaKwalif(płyta2);
-		wytwórnia3.addPłytaKwalif(płyta3);
+		zespol1.addPlyta(plyta3);
+		zespol2.addPlyta(plyta1);
+		zespol3.addPlyta(plyta2);
+		
+		
+		wytwornia1.addPlytaKwalif(plyta1);
+		wytwornia2.addPlytaKwalif(plyta2);
+		wytwornia3.addPlytaKwalif(plyta3);
 		
 		
 		System.out.println(klient1);
@@ -114,9 +113,9 @@ public class Main {
 		System.out.println(zakup3);
 		System.out.println(zakup4);
 		
-		System.out.println(wytwórnia1);
-		System.out.println(wytwórnia2);
-		System.out.println(wytwórnia3);
+		System.out.println(wytwornia1);
+		System.out.println(wytwornia2);
+		System.out.println(wytwornia3);
 		
 		
 		
@@ -125,13 +124,13 @@ public class Main {
 		System.out.println(zatrudnienie3);
 		System.out.println(zatrudnienie4);
 		
-		System.out.println(płyta1);
-		System.out.println(płyta2);
-		System.out.println(płyta3);
+		System.out.println(plyta1);
+		System.out.println(plyta2);
+		System.out.println(plyta3);
 
-		System.out.println(zespół1);
-		System.out.println(zespół2);
-		System.out.println(zespół3);
+		System.out.println(zespol1);
+		System.out.println(zespol2);
+		System.out.println(zespol3);
 		
 		System.out.println(muzyk1);
 		System.out.println(muzyk2);
@@ -146,30 +145,30 @@ public class Main {
 		Klient.SearchBySurname("Nowak");
 		
 		Pracownik.SearchByName("Krzysztof");
-		Pracownik.SearchBySurname("Stępień");
+		Pracownik.SearchBySurname("Stepien");
 		
-		Zespół.SearchByBand("AC/DC");
+		Zespol.SearchByBand("AC/DC");
 		
-		Płyta a = wytwórnia1.searchByCDsName("Highway to Hell");	//wyszukiwanie detali płyty po tytule za pomocą asocjacji kwalifikowanej
-		System.out.println("Szukałeś: " + a + "\n");
+		Plyta a = wytwornia1.searchByCDsName("Highway to Hell");	//wyszukiwanie detali plyty po tytule za pomoca asocjacji kwalifikowanej
+		System.out.println("Szukales: " + a + "\n");
 		
 		
 		
 	
 		/*
-		Zespół.pokażEkstensjeZespół();
+		Zespol.pokażEkstensjeZespol();
 		Zatrudnienie.pokażEkstensjeZatrudnienie();
 		Zakup.pokażEkstensjeZakup();
-		Wytwórnia.pokażEkstensjeWytwórnia();
-		RokZakończenia.pokażEkstensjeRokZakończenia();
+		Wytwornia.pokażEkstensjeWytwornia();
+		RokZakonczenia.pokażEkstensjeRokZakonczenia();
 		Pracownik.pokażEkstensjePracownik();
-		PłytaGatunkuRock.pokażEkstensjeRock();
-		Płyta.pokażEkstensjePłyta();
+		PlytaGatunkuRock.pokażEkstensjeRock();
+		Plyta.pokażEkstensjePlyta();
 		Osoba.pokażEkstensjOsoba();
 		Muzyk.pokażMuzykEkstensja();
 		Klient.pokażKlientEkstensja();
 		Email.pokażEmailEkstensja();
-		BudynekWytwórni.pokażBudynekEkstensja();
+		BudynekWytworni.pokażBudynekEkstensja();
 		*/
 		
 	

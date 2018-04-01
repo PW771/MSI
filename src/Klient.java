@@ -8,9 +8,9 @@ public class Klient extends Osoba {
 	
 	
 	
-	public boolean isStałyKlient() {			//metoda bool czy klient wydał wystarczająco pieniędzy by być kwalifikowanym jako stały klient
+	public boolean isStalyKlient() {			//metoda bool czy klient wydal wystarczajaco pieniedzy by byc kwalifikowanym jako staly klient
 		
-	if(getIlośćzakupów()>1000){
+	if(getIloscZakupow()>1000){
 		
 		return true;
 	}
@@ -19,14 +19,14 @@ public class Klient extends Osoba {
 	
 	}
 	
-	public double getIlośćzakupów() {
-		double ilośćzakupów=0;
+	public double getIloscZakupow() {
+		double ilosczakupow=0;
 		for(Zakup a : zakup){
-			ilośćzakupów+=a.getSuma();
+			ilosczakupow+=a.getSuma();
 			
 		}
 		
-		return ilośćzakupów;
+		return ilosczakupow;
 	}
 
 	
@@ -72,7 +72,7 @@ public static Vector<Klient> ekstensja = new Vector<Klient>();		//ekstensja
 	public static void SearchByName(String i){
 		for(Klient klient : ekstensja){
 		if(i.equals(klient.getImie())){
-		System.out.println("Szukałeś: " + klient);
+		System.out.println("Szukales: " + klient);
 			}
 		}
 			
@@ -81,7 +81,7 @@ public static Vector<Klient> ekstensja = new Vector<Klient>();		//ekstensja
 	public static void SearchBySurname(String i){
 		for(Klient klient : ekstensja){
 		if(i.equals(klient.getNazwisko())){
-		System.out.println("Szukałeś: " + klient);
+		System.out.println("Szukales: " + klient);
 		}
 		}
 	
@@ -90,10 +90,10 @@ public static Vector<Klient> ekstensja = new Vector<Klient>();		//ekstensja
 	
 	
 	public String toString(){
-		String result = ("Klient: " + getImie() + " " + getNazwisko() + " Czy jest stałym klientem: " + 
-	isStałyKlient() + " Łącznie wydana kwota do tej pory: " + getIlośćzakupów() + " zł " + "Email: " + getEmail() + " Data dodania klienta: "+ getDataDodania() + "\n");
+		String result = ("Klient: " + getImie() + " " + getNazwisko() + " Czy jest stalym klientem: " + 
+	isStalyKlient() + " Lacznie wydana kwota do tej pory: " + getIloscZakupow() + " zl " + "Email: " + getEmail() + " Data dodania klienta: "+ getDataDodania() + "\n");
 		for(Zakup a : zakup){
-			result+= " ID zakupu: " + a.getId() + " Łączny koszt tego zakupu: " + a.getSuma() + " zł " + "\n";
+			result+= " ID zakupu: " + a.getId() + " Laczny koszt tego zakupu: " + a.getSuma() + " zl " + "\n";
 		}
 		
 		return result;
